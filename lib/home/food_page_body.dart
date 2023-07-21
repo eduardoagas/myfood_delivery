@@ -76,29 +76,31 @@ class _FoodPageBodyState extends State<FoodPageBody> {
       child: Stack(children: [
         Container(
             height: 220,
-            margin: EdgeInsets.only(left: 10, right: 10),
+            margin: const EdgeInsets.only(left: 10, right: 10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                color: index.isEven ? Color(0xFF69c5df) : Color(0xFF9294cc),
-                image: DecorationImage(
+                color: index.isEven
+                    ? const Color(0xFF69c5df)
+                    : const Color(0xFF9294cc),
+                image: const DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage("assets/image/food0.png")))),
         Align(
             alignment: Alignment.bottomCenter,
             child: Container(
               height: 120,
-              margin: EdgeInsets.only(left: 30, right: 30, bottom: 30),
+              margin: const EdgeInsets.only(left: 30, right: 30, bottom: 30),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 color: Colors.white,
               ),
               child: Container(
-                  padding: EdgeInsets.only(top: 10, left: 15, right: 15),
+                  padding: const EdgeInsets.only(top: 10, left: 15, right: 15),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       BigText(text: "Chinese Side"),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -112,21 +114,21 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                               );
                             }),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           SmallText(text: "4.5"),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           SmallText(text: "1287"),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           SmallText(text: "comments")
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
