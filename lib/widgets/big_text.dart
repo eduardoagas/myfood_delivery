@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myfood_delivery/utils/dimensions.dart';
 
 // ignore: must_be_immutable
 class BigText extends StatelessWidget {
@@ -11,7 +12,7 @@ class BigText extends StatelessWidget {
       {super.key,
       this.color = const Color(0xFF332d2b),
       required this.text,
-      this.size = 20,
+      this.size = 0,
       this.overFlow = TextOverflow.ellipsis});
 
   @override
@@ -21,7 +22,10 @@ class BigText extends StatelessWidget {
       maxLines: 1,
       overflow: overFlow,
       style: TextStyle(
-          fontFamily: 'Roboto', color: color, fontWeight: FontWeight.w400),
+          fontFamily: 'Roboto',
+          color: color,
+          fontSize: size == 0 ? Dimensions.font20 : size,
+          fontWeight: FontWeight.w400),
     );
   }
 }
