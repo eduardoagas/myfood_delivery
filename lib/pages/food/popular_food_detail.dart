@@ -3,6 +3,7 @@ import 'package:myfood_delivery/utils/dimensions.dart';
 import 'package:myfood_delivery/widgets/app_column.dart';
 import 'package:myfood_delivery/widgets/app_icon.dart';
 import 'package:myfood_delivery/widgets/big_text.dart';
+import 'package:myfood_delivery/widgets/expandable_text_widget.dart';
 import 'package:myfood_delivery/widgets/icon_and_text_widget.dart';
 import 'package:myfood_delivery/widgets/small_text.dart';
 
@@ -61,7 +62,16 @@ class PopularFoodDetail extends StatelessWidget {
                       SizedBox(
                         height: Dimensions.height20,
                       ),
-                      BigText(text: "Introduce:")
+                      BigText(text: "Introduce:"),
+                      SizedBox(height: Dimensions.height20),
+                      //ExpandableTextWidget(text: "oi seu pai tem boi")
+                      Expanded(
+                        child: SingleChildScrollView(
+                          child: ExpandableTextWidget(
+                              text:
+                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis iaculis nisi et hendrerit. Aliquam molestie, nunc quis suscipit aliquam, ipsum augue congue leo, eu gravida nulla velit quis purus. Quisque consectetur iaculis condimentum. Sed a dolor vestibulum, bibendum felis eu, gravida lacus. Vivamus ullamcorper neque elit. Praesent orci leo, aliquam vitae purus hendrerit, cursus volutpat ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a vehicula ligula. Aliquam sapien lacus, pretium eget mauris quis, congue sodales nis"),
+                        ),
+                      )
                     ],
                   )))
         ],
