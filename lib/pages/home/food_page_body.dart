@@ -1,11 +1,13 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:myfood_delivery/utils/colors.dart';
 import 'package:myfood_delivery/widgets/app_column.dart';
 import 'package:myfood_delivery/widgets/big_text.dart';
 import 'package:myfood_delivery/widgets/icon_and_text_widget.dart';
 import 'package:myfood_delivery/widgets/small_text.dart';
 
+import '../../controllers/popular_product_controller.dart';
 import '../../utils/dimensions.dart';
 
 class FoodPageBody extends StatefulWidget {
@@ -42,15 +44,17 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: Dimensions.pageView,
-          child: PageView.builder(
-              controller: pageController,
-              itemCount: 5,
-              itemBuilder: (context, position) {
-                return _buildPageItem(position);
-              }),
-        ),
+        GetBuilder<PopularProductController>(builder: (popularProducts) {
+          return SizedBox(
+            height: Dimensions.pageView,
+            child: PageView.builder(
+                controller: pageController,
+                itemCount: 5,
+                itemBuilder: (context, position) {
+                  return _buildPageItem(position);
+                }),
+          );
+        }),
         DotsIndicator(
           dotsCount: 5,
           position: _currPageValue.floor(),

@@ -19,7 +19,7 @@ class AppColumn extends StatelessWidget {
       children: [
         BigText(text: text, size: Dimensions.font26),
         SizedBox(
-          height: Dimensions.height10,
+          height: Dimensions.height10 / 2.5,
         ),
         Row(
           children: [
@@ -47,7 +47,7 @@ class AppColumn extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: Dimensions.height15,
+          height: Dimensions.height10,
         ),
         const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,7 +65,7 @@ class AppColumn extends StatelessWidget {
                 text: "32min",
                 iconColor: AppColors.iconColor2)
           ],
-        )
+        ),
       ],
     );
   }
