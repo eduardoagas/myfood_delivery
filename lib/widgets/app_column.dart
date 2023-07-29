@@ -32,16 +32,16 @@ class AppColumn extends StatelessWidget {
                 );
               }),
             ),
-            const SizedBox(
-              width: 10,
+            SizedBox(
+              width: Dimensions.width10,
             ),
             SmallText(text: "4.5"),
-            const SizedBox(
-              width: 10,
+            SizedBox(
+              width: Dimensions.width10,
             ),
             SmallText(text: "1287"),
-            const SizedBox(
-              width: 10,
+            SizedBox(
+              width: Dimensions.width10,
             ),
             SmallText(text: "comments")
           ],
