@@ -10,6 +10,9 @@ class PopularProductController extends GetxController {
       []; //underscore marks as a private variable, so...
   List<dynamic> get popularProductList => _popularProductList;
 
+  bool _isLoaded = false;
+  bool get isLoaded => _isLoaded;
+
   Future<void> getPopularProductList() async {
     Response response = await popularProductRepo.getPopularProductList();
     if (response.statusCode == 200) {
@@ -18,6 +21,7 @@ class PopularProductController extends GetxController {
       _popularProductList = [];
       _popularProductList.addAll(Product.fromJson(response.body).products);
       update();
+      _isLoaded = true;
     } else {
       print("got no shit");
     }
